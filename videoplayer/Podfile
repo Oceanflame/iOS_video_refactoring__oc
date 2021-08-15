@@ -1,0 +1,4 @@
+#podfile
+target 'videoplayer' do
+	pod 'Masonry'
+end
