@@ -12,6 +12,8 @@
 		1920A1A826C513DA00A5E15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1920A1A726C513DA00A5E15C /* Assets.xcassets */; };
 		1920A1AB26C513DA00A5E15C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1920A1A926C513DA00A5E15C /* LaunchScreen.storyboard */; };
 		1920A1AE26C513DA00A5E15C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1920A1AD26C513DA00A5E15C /* main.m */; };
+		193BD27F26CA4EA400199267 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193BD27E26CA4EA400199267 /* VideoListCell.m */; };
+		193BD28226CA7A6B00199267 /* player.m in Sources */ = {isa = PBXBuildFile; fileRef = 193BD28126CA7A6B00199267 /* player.m */; };
 		2092379FEEDA282303F40600 /* libPods-videoplayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068080B513C7A55D991A015D /* libPods-videoplayer.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,10 @@
 		1920A1AA26C513DA00A5E15C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1920A1AC26C513DA00A5E15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1920A1AD26C513DA00A5E15C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		193BD27D26CA4E8300199267 /* VideoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListCell.h; sourceTree = "<group>"; };
+		193BD27E26CA4EA400199267 /* VideoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListCell.m; sourceTree = "<group>"; };
+		193BD28026CA7A5B00199267 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		193BD28126CA7A6B00199267 /* player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = player.m; sourceTree = "<group>"; };
 		2D23F28337D0833E4D4EB519 /* Pods-videoplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoplayer.release.xcconfig"; path = "Target Support Files/Pods-videoplayer/Pods-videoplayer.release.xcconfig"; sourceTree = "<group>"; };
 		7704324A03E50A0CCC6FFF3C /* Pods-videoplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoplayer.debug.xcconfig"; path = "Target Support Files/Pods-videoplayer/Pods-videoplayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +73,10 @@
 				1920A19C26C513D900A5E15C /* AppDelegate.m */,
 				1920A1A126C513D900A5E15C /* ViewController.h */,
 				1920A1A226C513D900A5E15C /* ViewController.m */,
+				193BD27D26CA4E8300199267 /* VideoListCell.h */,
+				193BD28026CA7A5B00199267 /* player.h */,
+				193BD28126CA7A6B00199267 /* player.m */,
+				193BD27E26CA4EA400199267 /* VideoListCell.m */,
 				1920A1A726C513DA00A5E15C /* Assets.xcassets */,
 				1920A1A926C513DA00A5E15C /* LaunchScreen.storyboard */,
 				1920A1AC26C513DA00A5E15C /* Info.plist */,
@@ -187,7 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1920A1A326C513D900A5E15C /* ViewController.m in Sources */,
+				193BD27F26CA4EA400199267 /* VideoListCell.m in Sources */,
 				1920A19D26C513D900A5E15C /* AppDelegate.m in Sources */,
+				193BD28226CA7A6B00199267 /* player.m in Sources */,
 				1920A1AE26C513DA00A5E15C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
