@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) UILabel *videoNameLabel;//用于显示文件名的标签
 @property (nonatomic,strong) NSString *videoNameString;//文件名
 
--(UIImage *)getThumbnailImage:(NSString *)videoPath;//获取缩略图
 + (NSString *)reuseIdentifier; //重用ID
 
 @end

@@ -1,4 +1,5 @@
 #podfile
 target 'videoplayer' do
 	pod 'Masonry'
+  pod 'LookinServer', :configurations => ['Debug']
 end

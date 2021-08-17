@@ -14,6 +14,14 @@
 		1920A1AE26C513DA00A5E15C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1920A1AD26C513DA00A5E15C /* main.m */; };
 		193BD27F26CA4EA400199267 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193BD27E26CA4EA400199267 /* VideoListCell.m */; };
 		193BD28226CA7A6B00199267 /* player.m in Sources */ = {isa = PBXBuildFile; fileRef = 193BD28126CA7A6B00199267 /* player.m */; };
+		19AC158C26CB7B960011C35B /* 播放-暂停.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158526CB7B950011C35B /* 播放-暂停.png */; };
+		19AC158D26CB7B960011C35B /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158626CB7B950011C35B /* 返回.png */; };
+		19AC158E26CB7B960011C35B /* 暂停1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158726CB7B950011C35B /* 暂停1.png */; };
+		19AC158F26CB7B960011C35B /* 上一个1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158826CB7B960011C35B /* 上一个1.png */; };
+		19AC159026CB7B960011C35B /* 播视web_已赞.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158926CB7B960011C35B /* 播视web_已赞.png */; };
+		19AC159126CB7B960011C35B /* SLTT-616175704-270721-1907-136.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158A26CB7B960011C35B /* SLTT-616175704-270721-1907-136.pdf */; };
+		19AC159226CB7B960011C35B /* 播视web_未赞.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC158B26CB7B960011C35B /* 播视web_未赞.png */; };
+		19AC159426CB7BCE0011C35B /* 下一个1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19AC159326CB7BCE0011C35B /* 下一个1.png */; };
 		2092379FEEDA282303F40600 /* libPods-videoplayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 068080B513C7A55D991A015D /* libPods-videoplayer.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +40,14 @@
 		193BD27E26CA4EA400199267 /* VideoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListCell.m; sourceTree = "<group>"; };
 		193BD28026CA7A5B00199267 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
 		193BD28126CA7A6B00199267 /* player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = player.m; sourceTree = "<group>"; };
+		19AC158526CB7B950011C35B /* 播放-暂停.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播放-暂停.png"; sourceTree = "<group>"; };
+		19AC158626CB7B950011C35B /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
+		19AC158726CB7B950011C35B /* 暂停1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂停1.png"; sourceTree = "<group>"; };
+		19AC158826CB7B960011C35B /* 上一个1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上一个1.png"; sourceTree = "<group>"; };
+		19AC158926CB7B960011C35B /* 播视web_已赞.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播视web_已赞.png"; sourceTree = "<group>"; };
+		19AC158A26CB7B960011C35B /* SLTT-616175704-270721-1907-136.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SLTT-616175704-270721-1907-136.pdf"; sourceTree = "<group>"; };
+		19AC158B26CB7B960011C35B /* 播视web_未赞.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播视web_未赞.png"; sourceTree = "<group>"; };
+		19AC159326CB7BCE0011C35B /* 下一个1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一个1.png"; sourceTree = "<group>"; };
 		2D23F28337D0833E4D4EB519 /* Pods-videoplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoplayer.release.xcconfig"; path = "Target Support Files/Pods-videoplayer/Pods-videoplayer.release.xcconfig"; sourceTree = "<group>"; };
 		7704324A03E50A0CCC6FFF3C /* Pods-videoplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoplayer.debug.xcconfig"; path = "Target Support Files/Pods-videoplayer/Pods-videoplayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +85,22 @@
 		1920A19A26C513D900A5E15C /* videoplayer */ = {
 			isa = PBXGroup;
 			children = (
+				19AC159326CB7BCE0011C35B /* 下一个1.png */,
+				19AC158526CB7B950011C35B /* 播放-暂停.png */,
+				19AC158B26CB7B960011C35B /* 播视web_未赞.png */,
+				19AC158926CB7B960011C35B /* 播视web_已赞.png */,
+				19AC158626CB7B950011C35B /* 返回.png */,
+				19AC158826CB7B960011C35B /* 上一个1.png */,
+				19AC158726CB7B950011C35B /* 暂停1.png */,
+				19AC158A26CB7B960011C35B /* SLTT-616175704-270721-1907-136.pdf */,
 				1920A19B26C513D900A5E15C /* AppDelegate.h */,
 				1920A19C26C513D900A5E15C /* AppDelegate.m */,
 				1920A1A126C513D900A5E15C /* ViewController.h */,
 				1920A1A226C513D900A5E15C /* ViewController.m */,
 				193BD27D26CA4E8300199267 /* VideoListCell.h */,
+				193BD27E26CA4EA400199267 /* VideoListCell.m */,
 				193BD28026CA7A5B00199267 /* player.h */,
 				193BD28126CA7A6B00199267 /* player.m */,
-				193BD27E26CA4EA400199267 /* VideoListCell.m */,
 				1920A1A726C513DA00A5E15C /* Assets.xcassets */,
 				1920A1A926C513DA00A5E15C /* LaunchScreen.storyboard */,
 				1920A1AC26C513DA00A5E15C /* Info.plist */,
@@ -159,8 +183,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AC159126CB7B960011C35B /* SLTT-616175704-270721-1907-136.pdf in Resources */,
+				19AC158F26CB7B960011C35B /* 上一个1.png in Resources */,
 				1920A1AB26C513DA00A5E15C /* LaunchScreen.storyboard in Resources */,
+				19AC159026CB7B960011C35B /* 播视web_已赞.png in Resources */,
 				1920A1A826C513DA00A5E15C /* Assets.xcassets in Resources */,
+				19AC158E26CB7B960011C35B /* 暂停1.png in Resources */,
+				19AC159226CB7B960011C35B /* 播视web_未赞.png in Resources */,
+				19AC159426CB7BCE0011C35B /* 下一个1.png in Resources */,
+				19AC158C26CB7B960011C35B /* 播放-暂停.png in Resources */,
+				19AC158D26CB7B960011C35B /* 返回.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
