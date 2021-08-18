@@ -9,16 +9,18 @@
 #import "VideoListCell.h"
 #import "Masonry.h"
 #import "player.h"
+#import "playerData.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property UITableView *videolistTableView;//列表
 @property NSArray<NSString *> * firstpath;
-@property NSString * filepath;//documnet路径
+@property NSString * filepath;//documnet路径（带反斜杠）
 @property NSArray<NSString *> * filepathArray;//文件路径数组
 @property NSMutableArray<NSString *> * videofilepathArray;//视频文件名数组
 @property NSFileManager * fileManager;//文件管理器
+@property playerData *predataforplayer;//准备数据
 
 -(NSMutableArray<NSString *> *)videofinder:(NSArray<NSString *> *)array;//文件筛选函数
 -(UIImage *)getThumbnailImage:(NSString *)videoPath;//生成缩略图函数
@@ -39,13 +41,18 @@
     _videolistTableView.tableFooterView = [[UIView alloc] init];
     _firstpath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);//找document域内的文件路径
     _filepath = [_firstpath objectAtIndex:0];//取出文件路径
+    _filepath = [_filepath stringByAppendingString:@"/"];//加入反斜杠
     _fileManager = [NSFileManager defaultManager];
     _filepathArray = [_fileManager contentsOfDirectoryAtPath:_filepath error:nil];
     _videofilepathArray =[self videofinder:_filepathArray];//获取视频文件
+    
+    _predataforplayer = [[playerData alloc]init:_videofilepathArray :0 :_filepath];//部分播放器数据显加载
+    
     [self.view addSubview:_videolistTableView];//加入主视图
 }
 
--(NSMutableArray<NSString*>*)videofinder:(NSArray<NSString *> *)array//文件筛选
+//文件筛选
+-(NSMutableArray<NSString*>*)videofinder:(NSArray<NSString *> *)array
 {
     NSArray<NSString *> *videofilekinds = [[NSArray alloc] initWithObjects:@".mp4",@".mov",@".avi",@".mkv",@".wmv",@".rmvb",@".3gp",@".mgp",@".rm",@".xvid", nil];
     NSMutableArray<NSString *> *videofile = [[NSMutableArray alloc] init];
@@ -68,6 +75,7 @@
     return videofile;
 }
 
+//获取缩略图
 -(UIImage *)getThumbnailImage:(NSString *)videoPath {
     if (videoPath) {
         AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath: videoPath] options:nil];
@@ -95,16 +103,16 @@
 }
 
 #pragma mark - UITableViewDataSource
-
+//cell个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _videofilepathArray.count;
 }
-
+//每个cell的布局内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *filepathforvideo = [_filepath stringByAppendingString:@"/"];
-    filepathforvideo = [filepathforvideo stringByAppendingString:_videofilepathArray[indexPath.row]];
+
+    NSString *filepathforvideo = [_filepath stringByAppendingString:_videofilepathArray[indexPath.row]];
     
     VideoListCell *cell = (VideoListCell *)[tableView dequeueReusableCellWithIdentifier:[VideoListCell reuseIdentifier]];
     //这部分为复用，这是个函数，返回的是根据前一个cell的内容来服用新cell来优化
@@ -120,19 +128,12 @@
 //点击cell事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *fileroad = [_filepath stringByAppendingString:@"/"];
-    fileroad =[fileroad stringByAppendingString:_videofilepathArray[indexPath.row]];
-    NSURL *playUrl = [[NSURL alloc] initFileURLWithPath:fileroad];
+    [_predataforplayer changerow:indexPath.row];
     player *video = [[player alloc] init];
-    AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:playUrl];
-    video.videoplayer = [[AVPlayer alloc] initWithPlayerItem:item];
-    AVPlayerLayer *layer = [AVPlayerLayer playerLayerWithPlayer:video.videoplayer];
-    layer.frame = CGRectMake(0,0, self.view.frame.size.width , self.view.frame.size.height );
-    [video.view.layer addSublayer:layer];
+    video.data =_predataforplayer;
     [self presentViewController:video animated:YES completion:^{NSLog(@"切换视图");}];
-    [video.videoplayer play];
 }
-
+//cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190280C226CCA1720083341F /* playerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 190280C126CCA1720083341F /* playerData.m */; };
 		1920A19D26C513D900A5E15C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1920A19C26C513D900A5E15C /* AppDelegate.m */; };
 		1920A1A326C513D900A5E15C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1920A1A226C513D900A5E15C /* ViewController.m */; };
 		1920A1A826C513DA00A5E15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1920A1A726C513DA00A5E15C /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		068080B513C7A55D991A015D /* libPods-videoplayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-videoplayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		190280C026CCA15E0083341F /* playerData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = playerData.h; sourceTree = "<group>"; };
+		190280C126CCA1720083341F /* playerData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = playerData.m; sourceTree = "<group>"; };
 		1920A19826C513D900A5E15C /* videoplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = videoplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1920A19B26C513D900A5E15C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1920A19C26C513D900A5E15C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				1920A19C26C513D900A5E15C /* AppDelegate.m */,
 				1920A1A126C513D900A5E15C /* ViewController.h */,
 				1920A1A226C513D900A5E15C /* ViewController.m */,
+				190280C026CCA15E0083341F /* playerData.h */,
+				190280C126CCA1720083341F /* playerData.m */,
 				193BD27D26CA4E8300199267 /* VideoListCell.h */,
 				193BD27E26CA4EA400199267 /* VideoListCell.m */,
 				193BD28026CA7A5B00199267 /* player.h */,
@@ -230,6 +235,7 @@
 			files = (
 				1920A1A326C513D900A5E15C /* ViewController.m in Sources */,
 				193BD27F26CA4EA400199267 /* VideoListCell.m in Sources */,
+				190280C226CCA1720083341F /* playerData.m in Sources */,
 				1920A19D26C513D900A5E15C /* AppDelegate.m in Sources */,
 				193BD28226CA7A6B00199267 /* player.m in Sources */,
 				1920A1AE26C513DA00A5E15C /* main.m in Sources */,
